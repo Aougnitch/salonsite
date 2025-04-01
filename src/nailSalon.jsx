@@ -7,21 +7,15 @@ import { FaFacebook, FaInstagram, FaTwitter, FaBars, FaTimes } from "react-icons
 import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 
-
 import slide1 from "./assets/slide1.jpg";
 import slide2 from "./assets/slide2.jpg";
 import slide3 from "./assets/slide3.jpg";
 import slide4 from "./assets/slide4.jpg";
 import slide5 from "./assets/slide5.jpg";
-import headerBanner from "./assets/headerImage.jpg"
-
-
-
+import headerBanner from "./assets/headerImage.jpg";
 
 const NailSalon = () => {
-  
   const navigate = useNavigate();
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -36,70 +30,24 @@ const NailSalon = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-<ul className={`md:flex gap-6 text-lg font-bold absolute md:static bg-white md:bg-transparent top-0 left-0 w-full h-full md:w-auto md:h-auto md:flex-row flex-col items-center justify-center transition-transform duration-500 ease-in-out transform ${menuOpen ? 'translate-y-0 flex fixed bg-white w-screen h-screen z-98' : 'hidden md:flex'}`} style={{ zIndex: menuOpen ? 98 : 'auto' }}>
-  <li>
-    <Link 
-      to="about" 
-      smooth={true} 
-      duration={500} 
-      className="block p-4 text-pink-200 hover:text-light-pink-100 cursor-pointer"
-      onClick={() => setMenuOpen(false)}
-    >
-      About
-    </Link>
-  </li>
-  <li>
-    <Link 
-      to="work" 
-      smooth={true} 
-      duration={500} 
-      className="block p-4 text-pink-200 hover:text-light-pink-100 cursor-pointer"
-      onClick={() => setMenuOpen(false)}
-    >
-      Our Work
-    </Link>
-  </li>
-  <li>
-    <Link 
-      to="pricing" 
-      smooth={true} 
-      duration={500} 
-      className="block p-4 text-pink-200 hover:text-light-pink-100 cursor-pointer"
-      onClick={() => setMenuOpen(false)}
-    >
-      Services
-    </Link>
-  </li>
-  <li>
-    <Link 
-      to="contact" 
-      smooth={true} 
-      duration={500} 
-      className="block p-4 text-pink-200 hover:text-light-pink-100 cursor-pointer"
-      onClick={() => setMenuOpen(false)}
-    >
-      Find Us
-    </Link>
-  </li>
-</ul>
-
+        <ul className={`md:flex gap-6 text-lg font-bold absolute md:static bg-white md:bg-transparent top-0 left-0 w-full h-full md:w-auto md:h-auto md:flex-row flex-col items-center justify-center transition-transform duration-500 ease-in-out transform ${menuOpen ? 'translate-y-0 flex fixed bg-white w-screen h-screen z-98' : 'hidden md:flex'}`} style={{ zIndex: menuOpen ? 98 : 'auto' }}>
+          <li><Link to="about" smooth={true} duration={500} className="block p-4 text-pink-200 hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>About</Link></li>
+          <li><Link to="work" smooth={true} duration={500} className="block p-4 text-pink-200 hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Our Work</Link></li>
+          <li><Link to="pricing" smooth={true} duration={500} className="block p-4 text-pink-200 hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Services</Link></li>
+          <li><Link to="contact" smooth={true} duration={500} className="block p-4 text-pink-200 hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Find Us</Link></li>
+        </ul>
       </nav>
 
       <div className="w-full flex flex-col items-center max-w-screen">
         {/* About Section */}
         <section 
           id="about"
-          className="w-full h-100 flex flex-col items-center justify-center p-8 text-center bg-light-pink-100 bg-cover bg-center"
-          
+          className="w-full h-screen flex flex-col items-center justify-center p-8 text-center bg-cover bg-center"
+          style={{ backgroundImage: `url(${headerBanner})`, maxHeight: "65vh" }}
         >
-          <img src={headerBanner} alt="header banner" className="" />
-            <h1 className='mb-4 font-bold text-pink-200 text-2xl'>Place holder company name</h1>
-          
+          <h1 className='text-center pb-6 font-bold'>Place Holder company name</h1>
           <div className="flex flex-row gap-4">
-            <button className=" text-pink-200 px-6 py-3 rounded-lg shadow-md hover:bg-coral-600 transition"
-            onClick={() => navigate('/pricingPage')}
-            // Link to another page
-            >Services</button>
+            <button className="text-pink-200 px-6 py-3 rounded-lg shadow-md hover:bg-coral-600 transition" onClick={() => navigate('/pricingPage')}>Services</button>
             <button className="bg-pink-200 text-white px-6 py-3 rounded-lg shadow-md hover:bg-pink-500 transition">Book an Appointment</button>
           </div>
         </section>
