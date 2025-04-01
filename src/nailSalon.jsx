@@ -13,6 +13,7 @@ import slide2 from "./assets/slide2.jpg";
 import slide3 from "./assets/slide3.jpg";
 import slide4 from "./assets/slide4.jpg";
 import slide5 from "./assets/slide5.jpg";
+import headerBanner from "./assets/headerImage.jpg"
 
 
 
@@ -89,9 +90,9 @@ const NailSalon = () => {
         <section 
           id="about"
           className="w-full h-100 flex flex-col items-center justify-center p-8 text-center bg-light-pink-100 bg-cover bg-center"
-          style={{ backgroundImage: "url('/src/assets/header-image.jpg')" }}
-        >
           
+        >
+          <img src={headerBanner} alt="header banner" className="" />
             <h1 className='mb-4 font-bold text-pink-200 text-2xl'>Place holder company name</h1>
           
           <div className="flex flex-row gap-4">
