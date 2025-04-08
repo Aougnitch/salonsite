@@ -110,17 +110,17 @@ const NailSalon = () => {
         <RevealSection>
           <section id="work" className=" sm:mb-8 text-center w-full h-full">
            
-            <div className="flex flex-row place-content-evenly w-full h-full">
-              <div className='text-center w-1/3 flex place-items-center justify-center'>
-                <h3 className='text-backcolor md:text-3xl text-md' >Our Gallery</h3>
+            <div className="flex md:flex-row flex-col place-content-evenly w-full h-full">
+              <div className='text-center  md:w-1/3 flex place-items-center justify-center '>
+                <h3 className='text-backcolor text-2xl md:text-3xl md:text-md mb-8' >Our Gallery</h3>
               </div>
               
-              <Carousel showThumbs={false} autoPlay infiniteLoop className="w-1/2 h-full">
-                <img src={slide1} alt="Nail Art 1" className="h-150 object-fill rounded-xl" />
-                <img src={slide2} alt="Nail Art 2" className="h-150 object-fill rounded-xl" />
-                <img src={slide3} alt="Nail Art 3" className="h-150 object-fill rounded-xl" />
-                <img src={slide4} alt="Nail Art 4" className="h-150 object-fill rounded-xl" />
-                <img src={slide5} alt="Nail Art 5" className="h-150 object-fill rounded-xl" />
+              <Carousel showThumbs={false} autoPlay infiniteLoop className="md:w-1/2 md:h-full">
+                <img src={slide1} alt="Nail Art 1" className="h-120 md:h-150 object-fill rounded-xl" />
+                <img src={slide2} alt="Nail Art 2" className="h-120 md:h-150 object-fill rounded-xl" />
+                <img src={slide3} alt="Nail Art 3" className="h-120 md:h-150 object-fill rounded-xl" />
+                <img src={slide4} alt="Nail Art 4" className="h-120 md:h-150 object-fill rounded-xl" />
+                <img src={slide5} alt="Nail Art 5" className="h-120 md:h-150 object-fill rounded-xl" />
               </Carousel>
             </div>
           </section>
@@ -128,15 +128,15 @@ const NailSalon = () => {
 
         {/* Pricing Section */}
         
-          <section id="pricing" className="w-full px-6 h-full sm:mb-8 text-center ">
-            <h2 className="text-2xl sm:text-3xl mb-6 mt-6 text-backcolor">Our Services</h2>
-            <div className="grid max-h-full w-full grid-cols-2 lg:grid-cols-4 gap-6  justify-center">
+          <section id="pricing" className="w-full px-3 md:px-6 h-full sm:mb-8 text-center ">
+            <h2 className="text-2xl sm:text-3xl mb-10 mt-6 text-backcolor">Our Services</h2>
+            <div className="grid max-h-full w-full grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6  justify-center">
             <Card image={card1} title="Card One" description="Description for card one." />
             <Card image={card2} title="Card Two" description="Description for card two." />
             <Card image={card3} title="Card Three" description="Description for card three." />
             <Card image={card4} title="Card Four" description="Description for card four." />
             </div>
-            <div className="mt-8 justify-center">
+            <div className="mt-6 md:mt-8 justify-center">
               <button
                 className="text-white bg-backcolor px-6 py-3 rounded-lg shadow-md hover:bg-green-900 transition"
                 onClick={() => window.location.href = '/pricingPage'}
@@ -150,7 +150,7 @@ const NailSalon = () => {
         {/* Google Maps Section */}
       
           <section id="contact" className="p-8  mb-4 sm:mb-8 bg-light-pink-200 w-full">
-            <h2 className="text-2xl sm:text-3xl  mb-6 mt-6 text-backcolor text-center">Find Us</h2>
+            <h2 className="text-2xl sm:text-3xl  mb-10 mt-6 text-backcolor text-center">Find Us</h2>
             <subcontainer className="w-full flex flex-row ">
               <subsection className="w-1/2 flex flex-col justify-center place-content-start">
                 <h3 className='text-backcolor md:text-3xl text-md'>You can contact us with any questions or queries</h3>
