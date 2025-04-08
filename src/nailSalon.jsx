@@ -14,6 +14,8 @@ import slide4 from "./assets/slide4.jpg";
 import slide5 from "./assets/slide5.jpg";
 import headerBanner from "./assets/header-image.png";
 
+import logo from "./assets/logo-no-bg.png"
+
 import { Card, card1, card2, card3, card4 } from "./cards";
 
 
@@ -63,7 +65,7 @@ const NailSalon = () => {
     <div className={`min-h-screen bg-white flex flex-col items-center ${menuOpen ? 'overflow-hidden' : ''}`}>
       {/* Navigation */}
       <nav className="text-white p-2 w-full flex justify-between items-center fixed top-0 left-0 z-50 bg-white shadow-md">
-        <img src="/src/assets/logo-no-bg.png" alt="Logo" className="h-20" />
+        <img src={logo} alt="Logo" className="h-20" />
         <button 
           className="md:hidden text-backcolor z-99 text-2xl mr-4" 
           onClick={() => setMenuOpen(!menuOpen)}
@@ -92,7 +94,7 @@ const NailSalon = () => {
 
             <div className="flex flex-col justify-center place-items-center md:w-1/2 h-full gap-4 z-10">
               <div className='flex flex-col h-full justify-center place-items-center'>
-                <img src="/src/assets/logo-no-bg.png" alt="Logo"/>
+                <img src={logo} alt="Logo"/>
                 <div className="flex flex-row gap-4 justify-center place-items-center">
                   <button className="text-backcolor px-6 py-3 rounded-lg shadow-md bg-green-50 hover:bg-backcolor hover:text-white transition md:text-xl h-full" onClick={() => navigate('/pricingPage')}>Services</button>
                   <button className="bg-backcolor text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-900 transition md:text-xl">Book Appointment</button>
