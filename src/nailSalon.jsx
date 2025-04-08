@@ -192,7 +192,7 @@ const NailSalon = () => {
         <div className="flex flex-col h-1/2 w-1/3 items-center">
         <h3 className='pb-2'>Follow us</h3>
         <div className='flex flex-col sm:flex-row gap-4'>
-          {/* <FaFacebook size={25} /> */}
+          <a href="https://www.facebook.com/p/Nova-Laser-and-Beauty-61569373780388/?locale=it_IT"><FaFacebook size={25} /></a>
           <a  href='https://www.instagram.com/novalaserbeauty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='><FaInstagram size={25}/></a>
           {/* <FaTwitter size={25} /> */}
         </div>
