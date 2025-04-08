@@ -151,10 +151,10 @@ const NailSalon = () => {
 
         {/* Google Maps Section */}
       
-          <section id="contact" className="p-8  mb-4 sm:mb-8 bg-light-pink-200 w-full">
+          <section id="contact" className="p-8  mb-4 sm:mb-8 bg-light-pink-200 w-full text-center">
             <h2 className="text-2xl sm:text-3xl  mb-10 mt-6 text-backcolor text-center">Find Us</h2>
             <subcontainer className="w-full flex flex-row ">
-              <subsection className="w-1/2 flex flex-col justify-center place-content-start">
+              <subsection className="w-1/2 flex flex-col justify-center">
                 <h3 className='text-backcolor md:text-3xl text-md'>You can contact us with any questions or queries</h3>
                 <br />
                 <h3 className='text-backcolor md:text-3xl text-md'><a href="tel:+35770070003">+357 70070003</a></h3>
@@ -192,9 +192,9 @@ const NailSalon = () => {
         <div className="flex flex-col h-1/2 w-1/3 items-center">
         <h3 className='pb-2'>Follow us</h3>
         <div className='flex flex-col sm:flex-row gap-4'>
-          <FaFacebook size={25} />
-          <FaInstagram size={25} />
-          <FaTwitter size={25} />
+          {/* <FaFacebook size={25} /> */}
+          <FaInstagram size={25} href='https://www.instagram.com/novalaserbeauty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='/>
+          {/* <FaTwitter size={25} /> */}
         </div>
         </div>
       </subcontainer>
