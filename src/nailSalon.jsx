@@ -74,11 +74,51 @@ const NailSalon = () => {
         </button>
 
         <ul className={`md:flex gap-6 text-lg font-bold absolute md:static bg-white md:bg-transparent top-0 left-0 w-full h-full md:w-auto md:h-auto md:flex-row flex-col items-center justify-center transition-transform duration-500 ease-in-out transform ${menuOpen ? 'translate-y-0 flex fixed bg-white w-screen h-screen z-98' : 'hidden md:flex'}`} style={{ zIndex: menuOpen ? 98 : 'auto' }}>
-          <li><Link to="about" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>About</Link></li>
-          <li><Link to="work" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Our Work</Link></li>
-          <li><Link to="pricing" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Services</Link></li>
-          <li><Link to="contact" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Find Us</Link></li>
-        </ul>
+                        {/* <li><Link to="about" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>About</Link></li> */}
+                        {/* <li><Link to="work" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Our Work</Link></li> */}
+                        
+                        {/* Changed Services to use navigate */}
+                        <li>
+                          <button 
+                            onClick={() => {
+                              setMenuOpen(false);
+                              navigate('/');
+                            }}
+                            className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer bg-transparent"
+                          >
+                            Home
+                          </button>
+                        </li>
+                        <li>
+                          <button 
+                            onClick={() => {
+                              setMenuOpen(false);
+                              navigate('/pricingPage');
+                            }}
+                            className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer bg-transparent"
+                          >
+                            Services
+                          </button>
+                        </li> 
+                        
+                        {/* New "Book Appointment" link */}
+                        <li>
+                          <a 
+                            href="YOUR_BOOKING_URL_HERE" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer"
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            Book Appointment
+                          </a>
+                        </li>
+
+                        <li><Link to="contact" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
+                        
+                       
+                        
+                      </ul>
       </nav>
 
       <div className="w-full flex flex-col items-center pt-40 md:pt-24 ">
@@ -98,7 +138,7 @@ const NailSalon = () => {
                 <div className="flex flex-row gap-4 justify-center place-items-center">
                   <button className="text-backcolor px-6 py-3 rounded-lg shadow-md bg-green-50 hover:bg-backcolor hover:text-white transition md:text-xl h-full" onClick={() => navigate('/pricingPage')}>Services</button>
                   <button className="bg-backcolor text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-900 transition md:text-xl">Book Appointment</button>
-                </div>
+                </div>  
               </div>
             </div>
 
