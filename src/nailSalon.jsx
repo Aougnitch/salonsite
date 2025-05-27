@@ -67,15 +67,15 @@ const NailSalon = () => {
       <nav className="text-white p-2 w-full flex justify-between items-center sticky top-0 left-0 z-50 bg-white shadow-md max-h-30">
         <img src={logo} alt="Logo" className="h-40 " />
         <button 
-          className="md:hidden text-backcolor z-99 text-2xl mr-4" 
+          className="md:hidden text-gray-800 z-99 text-2xl mr-4" 
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         <ul className={`md:flex gap-6 text-lg font-bold absolute md:static bg-white md:bg-transparent top-0 left-0 w-full h-full md:w-auto md:h-auto md:flex-row flex-col items-center justify-center transition-transform duration-500 ease-in-out transform ${menuOpen ? 'translate-y-0 flex fixed bg-white w-screen h-screen z-98' : 'hidden md:flex'}`} style={{ zIndex: menuOpen ? 98 : 'auto' }}>
-                        {/* <li><Link to="about" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>About</Link></li> */}
-                        {/* <li><Link to="work" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Our Work</Link></li> */}
+                        {/* <li><Link to="about" smooth={true} duration={500} className="block p-4 text-gray-800 hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>About</Link></li> */}
+                        {/* <li><Link to="work" smooth={true} duration={500} className="block p-4 text-gray-800 hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Our Work</Link></li> */}
                         
                         {/* Changed Services to use navigate */}
                         <li>
@@ -84,7 +84,7 @@ const NailSalon = () => {
                               setMenuOpen(false);
                               navigate('/');
                             }}
-                            className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer bg-transparent"
+                            className="block p-4 text-gray-800 hover:text-light-pink-100 cursor-pointer bg-transparent"
                           >
                             Home
                           </button>
@@ -95,7 +95,7 @@ const NailSalon = () => {
                               setMenuOpen(false);
                               navigate('/pricingPage');
                             }}
-                            className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer bg-transparent"
+                            className="block p-4 text-gray-800 hover:text-light-pink-100 cursor-pointer bg-transparent"
                           >
                             Services
                           </button>
@@ -107,14 +107,14 @@ const NailSalon = () => {
                             href="YOUR_BOOKING_URL_HERE" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer"
+                            className="block p-4 text-gray-800 hover:text-light-pink-100 cursor-pointer"
                             onClick={() => setMenuOpen(false)}
                           >
                             Book Appointment
                           </a>
                         </li>
 
-                        <li><Link to="contact" smooth={true} duration={500} className="block p-4 text-backcolor hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
+                        <li><Link to="contact" smooth={true} duration={500} className="block p-4 text-gray-800 hover:text-light-pink-100 cursor-pointer" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
                         
                        
                         
@@ -136,7 +136,7 @@ const NailSalon = () => {
               <div className='flex flex-col h-full justify-center place-items-center'>
                 <img src={logo} alt="Logo"/>
                 <div className="flex flex-row gap-4 justify-center place-items-center">
-                  <button className="text-backcolor px-6 py-3 rounded-lg shadow-md bg-green-50 hover:bg-backcolor hover:text-white transition md:text-xl h-full" onClick={() => navigate('/pricingPage')}>Services</button>
+                  <button className="text-gray-800 px-6 py-3 rounded-lg shadow-md bg-green-50 hover:bg-backcolor hover:text-white transition md:text-xl h-full" onClick={() => navigate('/pricingPage')}>Services</button>
                   <button className="bg-backcolor text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-900 transition md:text-xl">Book Appointment</button>
                 </div>  
               </div>
@@ -154,7 +154,7 @@ const NailSalon = () => {
            
             <div className="flex md:flex-row flex-col place-content-evenly w-full h-full">
               <div className='text-center  md:w-1/3 flex place-items-center justify-center '>
-                <h3 className='text-backcolor text-2xl md:text-3xl md:text-md mb-8' >Our Gallery</h3>
+                <h3 className='text-gray-800 text-2xl md:text-3xl md:text-md mb-8' >Our Gallery</h3>
               </div>
               
               <Carousel showThumbs={false} autoPlay infiniteLoop className="md:w-1/2 md:h-full">
@@ -171,7 +171,7 @@ const NailSalon = () => {
         {/* Pricing Section */}
         
           <section id="pricing" className="w-full px-3 md:px-6 h-full sm:mb-8 text-center ">
-            <h2 className="text-2xl sm:text-3xl mb-10 mt-6 text-backcolor">Our Services</h2>
+            <h2 className="text-2xl sm:text-3xl mb-10 mt-6 text-gray-800">Our Services</h2>
             <div className="grid max-h-full w-full grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6  justify-center">
             <Card image={card1} title="Card One" description="Description for card one." />
             <Card image={card2} title="Card Two" description="Description for card two." />
@@ -192,14 +192,14 @@ const NailSalon = () => {
         {/* Google Maps Section */}
       
           <section id="contact" className="p-8  mb-4 sm:mb-8 bg-light-pink-200 w-full text-center">
-            <h2 className="text-2xl sm:text-3xl  mb-10 mt-6 text-backcolor text-center">Find Us</h2>
-            <subcontainer className="w-full flex flex-row ">
+            <h2 className="text-2xl sm:text-3xl  mb-10 mt-6 text-gray-800 text-center">Find Us</h2>
+            <div className="w-full flex flex-row ">
               <subsection className="w-1/2 flex flex-col items-start">
-                <h3 className='text-backcolor md:text-3xl text-md'>Working Hours</h3>
+                <h3 className='text-gray-800 md:text-3xl text-md'>Working Hours</h3>
                 <br />
-                <p className='text-backcolor md:text-2xl text-md font-bold'>Monday-Friday: 8:30am-8:30pm</p>
-                <p className='text-backcolor md:text-2xl text-md font-bold'>Saturday: 9:30am-3pm</p>
-                <p className='text-backcolor md:text-2xl text-md font-bold'>Sunday: Closed</p>
+                <p className='text-gray-800 md:text-2xl text-md font-bold'>Monday-Friday: 8:30am-8:30pm</p>
+                <p className='text-gray-800 md:text-2xl text-md font-bold'>Saturday: 9:30am-3pm</p>
+                <p className='text-gray-800 md:text-2xl text-md font-bold'>Sunday: Closed</p>
 
 
               </subsection>
@@ -216,7 +216,7 @@ const NailSalon = () => {
 
 
               </subsection>
-            </subcontainer>
+            </div>
 
             {/* <div className='h-fit w-full p-4 flex place-content-center'>
               <h2>Working Hours</h2>
@@ -227,7 +227,7 @@ const NailSalon = () => {
 
       {/* Footer */}
       <footer className="bg-backcolor text-white p-4 w-full h-50">
-        <subcontainer className='flex flex-row items-center w-full h-full justify-center place-content-evenly text-xs sm:text-xl'>
+        <div className='flex flex-row items-center w-full h-full justify-center place-content-evenly text-xs sm:text-xl'>
         <div className='w-1/3 h-1/2 flex flex-col items-center'>
             <h3 className='pb-2'>Address</h3>
             <a className='text-center'>Archiepiskopou Makariou III 7, Yeroskipou 8200, Cyprus</a>
@@ -245,7 +245,7 @@ const NailSalon = () => {
           {/* <FaTwitter size={25} /> */}
         </div>
         </div>
-      </subcontainer>
+      </div>
       </footer>
     </div>
   );
