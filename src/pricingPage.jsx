@@ -11,9 +11,6 @@ import slideshow1 from './assets/slideshow1.mp4'
 import treatment2 from './assets/slideshow2.mp4'
 import treatment3 from './assets/slideshow3.mp4'
 
-
-import { FaFacebook, FaInstagram, FaTwitter, FaBars, FaTimes } from "react-icons/fa";
-
 const TablePage = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -192,12 +189,8 @@ const TablePage = () => {
             Submit Request
           </button>
         </form>
-
-        
       </section>
-
-
-  
+      
     </div>
   );
 };

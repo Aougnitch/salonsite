@@ -19,6 +19,7 @@ import logo from "./assets/logo-no-bg.png"
 import { Card, card1, card2, card3, card4 } from "./cards";
 
 
+
 const RevealSection = ({ children }) => {
   const ref = useRef();
   const [isVisible, setIsVisible] = useState(false);
@@ -194,7 +195,7 @@ const NailSalon = () => {
           <section id="contact" className="p-8  mb-4 sm:mb-8 bg-light-pink-200 w-full text-center">
             <h2 className="text-2xl sm:text-3xl  mb-10 mt-6 text-gray-800 text-center">Find Us</h2>
             <div className="w-full flex flex-row ">
-              <subsection className="w-1/2 flex flex-col items-start">
+              <div className="w-1/2 flex flex-col items-start">
                 <h3 className='text-gray-800 md:text-3xl text-md'>Working Hours</h3>
                 <br />
                 <p className='text-gray-800 md:text-2xl text-md font-bold'>Monday-Friday: 8:30am-8:30pm</p>
@@ -202,8 +203,8 @@ const NailSalon = () => {
                 <p className='text-gray-800 md:text-2xl text-md font-bold'>Sunday: Closed</p>
 
 
-              </subsection>
-              <subsection className="w-1/2">
+              </div>
+              <div className="w-1/2">
                 <iframe
                   title="Google Maps"
                   className="w-full max-w-3xl mx-auto h-70 border"
@@ -215,7 +216,7 @@ const NailSalon = () => {
 
 
 
-              </subsection>
+              </div>
             </div>
 
             {/* <div className='h-fit w-full p-4 flex place-content-center'>
