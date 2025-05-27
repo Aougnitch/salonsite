@@ -7,9 +7,12 @@ import logo from './assets/logo-no-bg.png';
 import lazer from './assets/lazer-1.jpg'
 import treatment from './assets/treatment.mp4'
 
-import slideshow1 from './assets/slideshow1.mp4'
 import treatment2 from './assets/slideshow2.mp4'
 import treatment3 from './assets/slideshow3.mp4'
+
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+
+
 
 const TablePage = () => {
   const navigate = useNavigate();
@@ -160,9 +163,42 @@ const TablePage = () => {
   </div>
 </section>
 
+ {/* Footer */}
+<footer className="bg-backcolor text-white p-4 w-full h-50 mt-12">
+  <div className='flex flex-row items-center w-full h-full justify-center place-content-evenly text-xs sm:text-xl'>
+    <div className='w-1/3 h-1/2 flex flex-col items-center'>
+      <h3 className='pb-2'>Address</h3>
+      <a className='text-center'>
+        Archiepiskopou Makariou III 7, Yeroskipou 8200, Cyprus
+      </a>
+    </div>
+    <div className='w-1/3 h-1/2 flex flex-col items-center'>
+      <h3 className='pb-2'>Contact Us</h3>
+      <a href="tel:+35770070003">70070003</a>
+    </div>
+    <div className="flex flex-col h-1/2 w-1/3 items-center">
+      <h3 className='pb-2'>Follow us</h3>
+      <div className='flex flex-col sm:flex-row gap-4'>
+        <a href="https://www.facebook.com/p/Nova-Laser-and-Beauty-61569373780388/?locale=it_IT" target="_blank" rel="noopener noreferrer">
+          <FaFacebook size={25} />
+        </a>
+        <a href='https://www.instagram.com/novalaserbeauty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' target="_blank" rel="noopener noreferrer">
+          <FaInstagram size={25} />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-      {/* FORM SECTION */}
-      <section className="bg-white w-full max-w-4xl px-6 py-10 mb-16 rounded-xl shadow-md">
+      
+    </div>
+  );
+};
+
+export default TablePage;
+
+     {/* FORM SECTION */}
+      {/* <section className="bg-white w-full max-w-4xl px-6 py-10 mb-16 rounded-xl shadow-md">
         <h2 className="text-2xl font-bold mb-6 text-center">Request a Consultation</h2>
         <form className="space-y-6">
           <div>
@@ -189,10 +225,5 @@ const TablePage = () => {
             Submit Request
           </button>
         </form>
-      </section>
-      
-    </div>
-  );
-};
+      </section> */}
 
-export default TablePage;
