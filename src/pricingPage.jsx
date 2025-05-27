@@ -76,56 +76,11 @@ const TablePage = () => {
               </ul>
 
             </nav>
-      <div className="w-full max-w-5xl pt-24">
-        {/* Table 1 */}
-        <h2 className="text-2xl font-semibold text-backcolor mb-6 text-center">First Table</h2>
-        <div className="overflow-x-auto shadow-lg rounded-xl">
-          <table className="w-full bg-backcolor text-white rounded-xl overflow-hidden">
-            <thead>
-              <tr className="bg-backcolor text-lg text-gray-300">
-                {[...Array(4)].map((_, colIdx) => (
-                  <th key={colIdx} className="p-4 border border-green-bg-green-800">Column {colIdx + 1}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {[...Array(10)].map((_, rowIdx) => (
-                <tr key={rowIdx} className="odd:bg-green-800 even:bg-backcolor hover:bg-slate-500 transition">
-                  {[...Array(4)].map((_, colIdx) => (
-                    <td key={colIdx} className="p-4 border border-green-bg-green-800 text-center">
-                      Row {rowIdx + 1}, Col {colIdx + 1}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+      <div className="w-full pt-24">
+        
 
-        {/* Table 2 */}
-        <h2 className="text-2xl font-semibold text-backcolor my-8 text-center">Second Table</h2>
-        <div className="overflow-x-auto shadow-lg rounded-xl">
-          <table className="w-full bg-backcolor text-white rounded-xl overflow-hidden">
-            <thead>
-              <tr className="bg-backcolor text-lg text-gray-300">
-                {[...Array(4)].map((_, colIdx) => (
-                  <th key={colIdx} className="p-4 border border-green-bg-green-800">Column {colIdx + 1}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {[...Array(10)].map((_, rowIdx) => (
-                <tr key={rowIdx} className="odd:bg-green-800 even:bg-backcolor hover:bg-slate-500 transition">
-                  {[...Array(4)].map((_, colIdx) => (
-                    <td key={colIdx} className="p-4 border border-green-bg-green-800 text-center">
-                      Row {rowIdx + 1}, Col {colIdx + 1}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+                
+
       </div>
     </div>
   );

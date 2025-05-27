@@ -64,8 +64,8 @@ const NailSalon = () => {
   return (
     <div className={`min-h-screen bg-white flex flex-col items-center ${menuOpen ? 'overflow-hidden' : ''}`}>
       {/* Navigation */}
-      <nav className="text-white p-2 w-full flex justify-between items-center fixed top-0 left-0 z-50 bg-white shadow-md">
-        <img src={logo} alt="Logo" className="h-20" />
+      <nav className="text-white p-2 w-full flex justify-between items-center sticky top-0 left-0 z-50 bg-white shadow-md max-h-30">
+        <img src={logo} alt="Logo" className="h-40 " />
         <button 
           className="md:hidden text-backcolor z-99 text-2xl mr-4" 
           onClick={() => setMenuOpen(!menuOpen)}
@@ -121,7 +121,7 @@ const NailSalon = () => {
                       </ul>
       </nav>
 
-      <div className="w-full flex flex-col items-center pt-40 md:pt-24 ">
+      <div className="w-full flex flex-col items-center pt-25 ">
         {/* About Section */}
         <RevealSection>
           <section 
@@ -194,16 +194,20 @@ const NailSalon = () => {
           <section id="contact" className="p-8  mb-4 sm:mb-8 bg-light-pink-200 w-full text-center">
             <h2 className="text-2xl sm:text-3xl  mb-10 mt-6 text-backcolor text-center">Find Us</h2>
             <subcontainer className="w-full flex flex-row ">
-              <subsection className="w-1/2 flex flex-col justify-center">
-                <h3 className='text-backcolor md:text-3xl text-md'>You can contact us with any questions or queries</h3>
+              <subsection className="w-1/2 flex flex-col items-start">
+                <h3 className='text-backcolor md:text-3xl text-md'>Working Hours</h3>
                 <br />
-                <h3 className='text-backcolor md:text-3xl text-md'><a href="tel:+35770070003">+357 70070003</a></h3>
+                <p className='text-backcolor md:text-2xl text-md font-bold'>Monday-Friday: 8:30am-8:30pm</p>
+                <p className='text-backcolor md:text-2xl text-md font-bold'>Saturday: 9:30am-3pm</p>
+                <p className='text-backcolor md:text-2xl text-md font-bold'>Sunday: Closed</p>
+
+
               </subsection>
               <subsection className="w-1/2">
                 <iframe
                   title="Google Maps"
                   className="w-full max-w-3xl mx-auto h-70 border"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4084.28424026967!2d32.448306099999996!3d34.763902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e705000f2ed3cf%3A0x7b19f202d4ed8d35!2sNOVA%20LASER%20%26%20BEAUTY%20CLINIC!5e1!3m2!1sen!2sae!4v1744131935116!5m2!1sen!2sae"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14450.579136492384!2d55.3917989!3d25.113883!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e70428a4a43f21%3A0xa975f9fec52fae77!2sArchiepiskopou%20Makariou%20III%207%2C%20Yeroskipou%208200%2C%20Cyprus!5e0!3m2!1sen!2sae!4v1748296976050!5m2!1sen!2sae"
                   allowFullScreen
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
@@ -213,6 +217,10 @@ const NailSalon = () => {
 
               </subsection>
             </subcontainer>
+
+            {/* <div className='h-fit w-full p-4 flex place-content-center'>
+              <h2>Working Hours</h2>
+            </div> */}
           </section>
        
       </div>
@@ -222,12 +230,12 @@ const NailSalon = () => {
         <subcontainer className='flex flex-row items-center w-full h-full justify-center place-content-evenly text-xs sm:text-xl'>
         <div className='w-1/3 h-1/2 flex flex-col items-center'>
             <h3 className='pb-2'>Address</h3>
-            <a>QC7X+H86, <br/>Yeroskipou 8200, Cyprus</a>
+            <a className='text-center'>Archiepiskopou Makariou III 7, Yeroskipou 8200, Cyprus</a>
             
         </div>
         <div className='w-1/3 h-1/2 flex flex-col items-center'>
         <h3 className='pb-2' >Contact Us</h3>
-        <a href="tel:+35770070003">+357 70070003</a>
+        <a href="tel:+35770070003">70070003</a>
         </div>
         <div className="flex flex-col h-1/2 w-1/3 items-center">
         <h3 className='pb-2'>Follow us</h3>
